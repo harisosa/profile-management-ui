@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="profile card flex-row border-0 shadow rounded-3 overflow-hidden">
+                <div class="container-fluid h-custom">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-md-7 col-lg-6 col-xl-5">
+                            <div class="left-container">
+                                <div class="icon-container p-3">
+                                    <fa-icon class="icon" [icon]="faUser"></fa-icon>
+                                </div>
+                            </div>
+                            <div *ngIf="profile" class="profile-detail mt-3">
+                                <p>Name : {{profile.fullname}}</p>
+                                <p>Email : {{profile.email}}</p>
+                                <a class="btn-out" (click)="onLogut()">Logout</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-6 offset-xl-1">
+                            <form [formGroup]="profileForm" (ngSubmit)="OpenModal()">
+                                <div class="divider d-flex align-items-center my-4">
+                                    <p class="text-center fw-bold mx-3 mb-0 divider-text">Profile</p>
+                                </div>
+
+                                <div class="input-group has-validation mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
+                                        <input type="text" formControlName="name" class="form-control form-control-sm"
+                                            [class.is-invalid]="name.invalid && (name.dirty || name.touched)"
+                                            placeholder="Name" required>
+                                        <label for="floatingInputGroup2">Name</label>
+                                    </div>
+                                    <div class="invalid-tooltip">
+                                        Name is required !
+                                    </div>
+                                </div>
+                                <div class="input-group has-validation mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="phone.invalid && (phone.dirty || phone.touched)">
+                                        <input type="text" formControlName="phone" class="form-control"
+                                            [class.is-invalid]="phone.invalid && (phone.dirty || phone.touched)"
+                                            placeholder="Phone" required>
+                                        <label for="floatingInputGroup2">Phone</label>
+                                    </div>
+                                    <div class="invalid-tooltip">
+                                        Invalid Phone format or required !
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="password.invalid">
+                                        <input formControlName="password" class="form-control" type="password"
+                                            [class.is-invalid]="password.invalid"
+                                            placeholder="Password" >
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4" *ngIf="password.value">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="confirmPassword.invalid">
+                                        <input formControlName="confirmPassword" class="form-control" type="password"
+                                        [class.is-invalid]="confirmPassword.invalid"
+                                         placeholder="Confirm Password">
+                                        <label for="floatingPassword">Confirm Password</label>
+                                        <div class="invalid-tooltip">
+                                            Password did not match!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-place my-3">
+                                    <button class="btn btn-md btn-update" type="submit">Update My Profile</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    

@@ -1,0 +1,68 @@
+.left-container{
+    width: 60%;
+}
+.right-container {
+    padding: 20px;
+    color: #d3f9ff;
+    backdrop-filter: brightness(0.5);
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .button-place {
+        width: 100%;
+        padding: 5px;
+
+        .btn-register {
+            width: 100%;
+            color: #221a50;
+            --bs-btn-bg: #bef6ff;
+            --bs-btn-hover-border-color:#bef6ff;
+            &:hover {
+                color: #d3f9ff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.card-img-right {
+        width: 45%;
+        //background: scroll center url('../../../assets/register.jpg');
+        background-size: cover;
+    
+}
+
+.login {
+    margin-top: 13rem !important;
+    margin-bottom: 3rem !important;
+    min-height: 55vh;
+    background-color: rgba(41, 39, 39, 0.3);
+  box-shadow: 0 5px 30px black;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 20px;
+    color:#fff;
+    .card-subtitle{
+        color:#00c2e1;
+    }
+}
+
+.btn-login {
+    --bs-btn-bg: #00c2e1;
+    --bs-btn-border-color: #00c2e1;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+}
+.login-image{
+    width: 10%;
+}
+

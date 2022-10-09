@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="login card flex-row border-0 shadow rounded-3 overflow-hidden">
+                <div class="card-body p-4 p-sm-5">
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100 w-100">
+                            <div class="card-title text-center mb-3 w-100">
+                                <span>Register to
+                                    <span class="card-subtitle">Profile Management</span>
+                                </span>
+                            </div>
+                            <form class="w-100" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    
+                                <div class="input-group has-validation mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="name.invalid && (name.dirty || name.touched)">
+                                        <input type="text" formControlName="name" class="form-control"
+                                            [class.is-invalid]="name.invalid && (name.dirty || name.touched)"
+                                            placeholder="Name" required>
+                                        <label for="floatingInputGroup2">Name</label>
+                                    </div>
+                                    <div class="invalid-tooltip">
+                                        Name is required !
+                                    </div>
+                                </div>
+                                <div class="input-group has-validation mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+                                        <input type="email" formControlName="email" class="form-control"
+                                            [class.is-invalid]="email.invalid && (email.dirty || email.touched)"
+                                            placeholder="Email" required>
+                                        <label for="floatingInputGroup2">Email</label>
+                                    </div>
+                                    <div class="invalid-tooltip">
+                                        Invalid Email format or required !
+                                    </div>
+                                </div>
+                                <div class="input-group has-validation mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="phone.invalid && (phone.dirty || phone.touched)">
+                                        <input type="text" formControlName="phone" class="form-control"
+                                            [class.is-invalid]="phone.invalid && (phone.dirty || phone.touched)"
+                                            placeholder="Phone" required>
+                                        <label for="floatingInputGroup2">Phone</label>
+                                    </div>
+                                    <div class="invalid-tooltip">
+                                        Invalid Phone format or required !
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="password.invalid && (password.dirty || password.touched)">
+                                        <input formControlName="password" class="form-control" type="password"
+                                        [class.is-invalid]="password.invalid && (password.dirty || password.touched)"
+                                         placeholder="Password" required>
+                                        <label for="floatingPassword">Password</label>
+                                        <div class="invalid-tooltip">
+                                           Password is required !
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <div class="form-floating"
+                                        [class.is-invalid]="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
+                                        <input formControlName="confirmPassword" class="form-control" type="password"
+                                        [class.is-invalid]="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)"
+                                         placeholder="Confirm Password" required>
+                                        <label for="floatingPassword">Confirm Password</label>
+                                        <div class="invalid-tooltip">
+                                            Password did not match!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid mb-2">
+                                    <button class="btn btn-lg btn-primary btn-login"
+                                    
+                                    type="submit">Create Your Profile</button>
+                                </div>
+                            </form>
+                        </div>
+                   
+
+                </div>
+                <div class="card-img-right  d-none d-md-flex">
+                    <div class="right-container">
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                            <span class="title">Welcome</span>
+                            <div class="subtitle">
+                                <span>To keep connected with us </span>
+                                <span>login and start to manage your personal info</span>
+                            </div>
+                            <div class="button-place mt-3">
+                                <button class="btn btn-sm btn-register" (click)="goToLogin()">Continue To Your Profile</button>
+                            </div>
+                        </div>
+                    </div>
+
+              
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

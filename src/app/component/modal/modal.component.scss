@@ -1,0 +1,29 @@
+.title{
+    color: #d3f9ff;
+}
+
+.subtitle{
+    color: #d3f9ff;
+}
+
+.cancel-button{
+    background-color: #ff0000;
+    color: #d3f9ff;
+    &:hover {
+        background-color: transparent;
+        border: 1px solid #ff0000;
+        color: #ff0000;
+        text-decoration: underline;
+    }
+}
+.ok-button{
+    background-color: #bef6ff;
+    color: #221a50;
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid #bef6ff;
+        color: #d3f9ff;
+        text-decoration: underline;
+    }
+}

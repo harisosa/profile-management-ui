@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    //font-family: "Josefin Sans",sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url('./assets/background_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    backdrop-filter: brightness(0.5);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.modal-class .mat-dialog-container{
+    background-color:  rgba(41, 39, 39);
+    /* Other CSS Styles */
+}

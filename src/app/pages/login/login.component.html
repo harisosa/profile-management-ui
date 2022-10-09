@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="login card flex-row border-0 shadow rounded-3 overflow-hidden">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                    <div class="left-container">
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                            <span class="title">Create Account ?</span>
+                            <div class="subtitle">
+                                <span>Join Us to manage your profile and account </span>
+                                <span>by create your profile in our platform</span>
+                            </div>
+                            <div class="button-place mt-3">
+                                <button class="btn btn-lg btn-register" (click)="onRegister()">Create My Profile</button>
+                            </div>
+                            <div>
+                                <img class="w-100" src="../../../assets/meeting.png">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-body p-4 p-sm-5">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 w-100">
+                        <div class="card-title text-center mb-3 w-100">
+
+                            <span>Welcome to 
+                                <span class="card-subtitle">Profile Management</span>
+                            </span>
+                        </div>
+                        <form class="w-100" [formGroup]="LoginForm" #form="ngForm" (ngSubmit)="onSubmit()">
+
+                            <div class="input-group has-validation mb-4">
+                                <div class="form-floating"
+                                    [class.is-invalid]="username.invalid && (username.dirty || username.touched)">
+                                    <input type="text" formControlName="username" class="form-control"
+                                        [class.is-invalid]="username.invalid && (username.dirty || username.touched)"
+                                        placeholder="Username" required>
+                                    <label for="floatingInputGroup2">Username</label>
+                                </div>
+                                <div class="invalid-tooltip">
+                                    Username is required !
+                                </div>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <div class="form-floating"
+                                    [class.is-invalid]="password.invalid && (password.dirty || password.touched)">
+                                    <input formControlName="password" class="form-control" type="password"
+                                    [class.is-invalid]="password.invalid && (password.dirty || password.touched)"
+                                     placeholder="Password" required>
+                                    <label for="floatingPassword">Password</label>
+                                    <div class="invalid-tooltip">
+                                       Password is required !
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid mb-2">
+                                <button class="btn btn-lg btn-primary btn-login"
+                                
+                                type="submit">Continue To Your
+                                    Profile</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

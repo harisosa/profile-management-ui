@@ -1,0 +1,74 @@
+.left-container {
+    padding: 20px;
+    width: 100%;
+    color: #d3f9ff;
+    backdrop-filter: brightness(0.5);
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .button-place {
+        width: 100%;
+        padding: 5px;
+
+        .btn-register {
+            width: 100%;
+            color: #221a50;
+            --bs-btn-bg: #bef6ff;
+            --bs-btn-hover-border-color: #bef6ff;
+
+            &:hover {
+                color: #d3f9ff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.card-img-left {
+    width: 45%;
+    /* Link to your background image using in the property below! */
+    //background: scroll center url('../../../assets/background-potrait.jpg');
+    background-size: cover;
+}
+
+.login {
+    margin-top: 13rem !important;
+    margin-bottom: 3rem !important;
+    min-height: 55vh;
+    background-color: rgba(41, 39, 39, 0.3);
+    box-shadow: 0 5px 30px black;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: #d3f9ff;
+    .card-subtitle {
+        color: #00c2e1;
+    }
+}
+
+.btn-login {
+    width: 100%;
+    color: #221a50;
+    --bs-btn-bg: #bef6ff;
+    --bs-btn-hover-border-color: #bef6ff;
+    --bs-btn-hover-bg: none;
+
+    &:hover {
+        color: #d3f9ff;
+        text-decoration: underline;
+    }
+
+}
+
+.login-image {
+    width: 10%;
+}
